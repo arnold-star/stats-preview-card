@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+body {
+  font-family: Inter, sans-serif;
+  margin: 0;
+}
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+h1 {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-size: 30px;
+}
+h2 {
+  color: hsl(0, 0%, 100%);
+  font-size: 16px;
+}
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  text-align: left;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 3rem;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+div > p {
+  margin-top: 1.5rem;
+  line-height: 1.5rem;
+  font-size: 12px;
+}
+@media screen and (min-width: 1440px) {
+  h1 {
+    font-size: 45px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  div > p {
+    font-size: 16px;
+    line-height: 2rem;
+    margin-top: 2.5rem;
+  }
+  .grid--1x3 {
+    padding-top: 5rem;
+  }
+  .div-1 {
+    border-radius: 15px 0 0 15px;
+  }
+  .div-2 {
+    border-radius: 0 15px 15px 0;
+  }
+  .image__container {
+    width: 100%;
+  }
+  .stat__text {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 9px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .image__container {
+    height: 100%;
+  }
+  div > p {
+    line-height: 1rem;
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  body {
+    font-size: 8px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 12px;
+  }
+  div > p {
+    font-size: 8px;
+  }
+  img {
+    object-fit: fill;
+  }
+  .stat__text {
+    font-size: 6px;
+  }
+}
+/* =====MAIN BODY===== */
+
+.main__background {
+  background: hsl(233, 47%, 7%);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-card {
+  max-width: 1024px;
+  height: auto;
+}
+
+/* =====GRID COMPONENT===== */
+
+.grid--1x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  margin: auto 5rem;
+}
+.div-1 {
+  height: auto;
+  max-width: 100%;
+  background: hsl(244, 38%, 16%);
+  border-radius: 8px 0 0 8px;
+}
+.div-2 {
+  border-radius: 0 8px 8px 0;
+  overflow: hidden;
+}
+@media screen and (max-width: 425px) {
+  .grid {
+    margin: auto 1rem;
+  }
+  .grid--2x1 {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    max-height: 90%;
+  }
+  .div-1 {
+    max-width: 100vw;
+    height: 100%;
+    order: 2;
+    border-radius: 0 0 5px 5px;
+  }
+  .div-2 {
+    max-width: 100vw;
+    height: 100%;
+    border-radius: 5px 5px 0 0;
+  }
+}
+/* =====STATS CONTAINER===== */
+.stat__content {
+  padding-top: 3rem;
+}
+.grid--1x3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.stat__text {
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+  font-size: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 12px;
+  }
+  div > p {
+    font-size: 9px;
+  }
+  .stat__text {
+    font-size: 7px;
+  }
+  .stat__content {
+    padding-top: 3rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  h2 {
+    font-size: 14px;
+  }
+  h1,
+  h2,
+  p {
+    text-align: center;
+  }
+  .grid--3x1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 0.2rem;
+  }
+
+  .stat__content {
+    padding-top: 0.5rem;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+  .stat__text {
+    padding-top: 0.2rem;
+    margin-top: 0;
+  }
+}
+
+/* =====CARD CONTENT===== */
+h1 > span {
+  color: hsl(277, 64%, 61%);
+}
+.card__content {
+  padding: 3rem 4rem 0 3rem;
+}
+@media screen and (max-width: 768px) {
+  .card__content {
+    padding: 2rem 3rem 0 2rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .card__content {
+    padding: 1rem 1rem;
+  }
+}
+
+/* =====IMAGE CONTAINER===== */
+
+.image__container {
+  display: inline-block;
+  position: relative;
+  z-index: 100;
+  background: hsl(277, 64%, 61%);
+}
+.card__image {
+  max-width: 100%;
+  display: block;
+  position: relative;
+  z-index: -100;
+  opacity: 0.4;
+}
+
+/* =====ATTRIBUTION===== */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  padding-bottom: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media screen and (max-width: 425px) {
+  .attribution {
+    display: none;
+  }
+}
